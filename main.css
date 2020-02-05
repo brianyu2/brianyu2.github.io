@@ -1,0 +1,118 @@
+h3,p{
+    color: white;
+    margin-right: 25%;
+}
+
+p {
+    font-size: 16px;
+}
+
+.head-title {
+    color: lightgrey;
+    font-family: "HaloFont", serif;
+    font-size: 50px;
+}
+
+@font-face {
+    font-family: "HaloFont";
+    src: url("fonts/halofont");
+    src:
+            url("fonts/halofont") format("woff"),
+            url("fonts/halofont/halo.ttf") format("truetype"),
+            url("fonts/halofont#filename") format("svg");
+}
+
+.sub-title {
+    color: white;
+}
+
+.main-text{
+    padding-top: 2%;
+    margin: auto;
+    width: 80%;
+    padding-right: 20px;
+}
+#haloCE{
+    float: right;
+    max-width: 360px;
+    height: auto;
+    padding-left: 40px;
+}
+
+.clearfix {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+h1{
+    color: white;
+    text-align: center;
+}
+.sheet-size{
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 70%;
+    height: 600px;
+}
+
+.useful-links{
+    color: white;
+}
+
+#livesplit-img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+    width: 600px;
+    height: auto;
+    margin: auto;
+}
+
+.youtube-frame {
+    display: block;
+    margin: 0 auto;
+}
+
+.image-description {
+    color: grey;
+    text-align: center;
+}
+
+dt {
+    float: left;
+    width: 10%;
+    text-align: right;
+    padding: .25em;
+    clear: left;
+    color: lightgrey;
+}
+
+dd {
+    float: left;
+    width: 60%;
+    padding: .25em;
+    color: white;
+}
+
+dl:after {content:"";display:table;clear:both;}
+
+.twitch{
+    display: inline;
+    float: none;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.twitch-button{
+    background-color: #008CBA; /* Green */
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}

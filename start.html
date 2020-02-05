@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Halo CE Speedrunning</title>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body background="images/BG.png">
+<nav class="navbar navbar-default navbar-inverse" style="background-color: #19448a">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://haloruns.com/">
+                <img src="images/halorunslogo.png" alt="Logo" style="width:20px;">
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="ce.html">Halo CE Speedrunning <span class="sr-only">(current)</span></a></li>
+                <li><a href="start.html">Getting Started</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="runners.html">Runners</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Glitches<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Glitch Overview</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Pillar of Autumn</a></li>
+                        <li><a href="#">Halo</a></li>
+                        <li><a href="#">Truth and Reconciliation</a></li>
+                        <li><a href="#">The Silent Cartographer</a></li>
+                        <li><a href="#">Assault on the Control Room</a></li>
+                        <li><a href="#">343 Guilty Spark</a></li>
+                        <li><a href="#">The Library</a></li>
+                        <li><a href="#">Two Betrayals</a></li>
+                        <li><a href="#">Keyes</a></li>
+                        <li><a href="#">The Maw</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">Return to ART151</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<h1 class="head-title">
+    Getting Started
+</h1>
+<div class="main-text clearfix">
+    <p>
+        If you are here to learn about how to get started with speedrunning Halo CE, here is a list of resources and
+        instructions on how to set up LiveSplit and your Halo CE game, including all of the necessary software that
+        is needed to run the game.
+    </p>
+    <h3 class="sub-title">
+        Getting the game
+    </h3>
+    <p>
+        If you don't have a copy of the game, you can buy it online. The Halo: The Master Chief Collection version
+        of Halo CE will be coming out some time in the spring of 2020. If you want more information about obtaining the
+        game in other ways, ask in the <a href="https://discordapp.com/invite/rvdsjGw">HaloRuns Discord</a>.
+    </p>
+    <h3 class="sub-title">
+        Setting up LiveSplit
+    </h3>
+    <p>
+        LiveSplit is the main timer that runners use for the game. To download it, click
+        <a href="https://livesplit.org/downloads/">here</a>. Once you have downloaded it, right click the timer and
+        click "Edit Splits". Here, you'll see the following image. <img id="livesplit-img" src="images/LivesplitExample.PNG">
+    </p>
+    <p>
+        Under "Game Name" you will type "Halo: Combat Evolved". If done correctly, the autosplitter main from
+        Fatalis will show up. Click "Activate" to activate the autosplitter. As of now, the autosplitter will only
+        work with the original PC version of the game. For run category, type whatever category you are running.
+        To add splits to your LiveSplit, Click on the table, then click "Insert Below". Under "Segment Name", you will
+        add 9 other splits, and name them whatever you like to fit the ten levels featured in the game.
+    </p>
+    <p>
+        There are also some individual level autosplitters for the game as well.
+        <a href="https://github.com/Burnt-o/Halo-IL-splitters/releases/tag/v1.0">Here is the link to download the IL
+            autosplitters</a>
+        <br>
+        To set these up, right click your splits and select "Edit Layout". From here, click the + icon, and head to
+        "Control" > "Scriptable Auto Splitter". Select the file path to the level you wish to run, and add the
+        corresponding splits to your LiveSplit.
+    </p>
+    <h3 class="sub-title">
+        Other Miscellaneous Tools
+    </h3>
+    <p>
+        There are other programs that people use for various tasks. If you want more information in particular for
+        whatever program to use, ask in the haloruns discord. I will link a few here that most runners use.
+        <ul>
+            <li class="useful-links"><a href="https://obsproject.com/">OBS: Open Broadcaster Software</a> - Used for recording gameplay.</li>
+            <li class="useful-links"><a href="https://streamlabs.com/">Streamlabs OBS</a> - Alternative software for recording gameplay.</li>
+            <li class="useful-links"><a href="https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html">Rivatuner</a> - Frame limiter used to limit fps to 120.</li>
+            <li class="useful-links"><a href="https://www.bandicam.com/downloads/">Bandicam</a> - Frame limiter used to toggle fps.</li>
+            <li class="useful-links"><a href="http://198.98.120.174/">Halo AntiCheat 2 (HAC)</a> - Used to fix FOV and enables console commands for testing</li>
+            <li class="useful-links"><a href="https://github.com/dlrudie/WidescreenFixer/releases/tag/Original">Widescreen Fixer</a> - Fixes FOV for Halo (alternative for HAC2)</li>
+    </ul>
+</div>
+</body>
+</html>

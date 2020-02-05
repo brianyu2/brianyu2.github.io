@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Halo CE Speedrunning</title>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body background="images/BG.png">
+<nav class="navbar navbar-default navbar-inverse" style="background-color: #19448a">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://haloruns.com/">
+                <img src="images/halorunslogo.png" alt="Logo" style="width:20px;">
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="ce.html">Halo CE Speedrunning <span class="sr-only">(current)</span></a></li>
+                <li><a href="start.html">Getting Started</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="runners.html">Runners</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Glitches<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Glitch Overview</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Pillar of Autumn</a></li>
+                        <li><a href="#">Halo</a></li>
+                        <li><a href="#">Truth and Reconciliation</a></li>
+                        <li><a href="#">The Silent Cartographer</a></li>
+                        <li><a href="#">Assault on the Control Room</a></li>
+                        <li><a href="#">343 Guilty Spark</a></li>
+                        <li><a href="#">The Library</a></li>
+                        <li><a href="#">Two Betrayals</a></li>
+                        <li><a href="#">Keyes</a></li>
+                        <li><a href="#">The Maw</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">Return to ART151</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<h1 class="head-title">Runners</h1>
+<div class="main-text clearfix">
+<p>Here are some notable runners of the game and their accomplishments</p>
+    <br>
+    <!-- Add a placeholder for the Twitch embed -->
+    <div class="twitch">
+    <div id="twitch-embed"></div>
+    <!-- Load the Twitch embed script -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+            var embed = new Twitch.Embed("twitch-embed", {
+                width: 854,
+                height: 480,
+                channel: "haloraces",
+                layout: "video",
+                autoplay: true,
+                allowFullscreen: true
+
+            });
+            function changeChannel(chan) {
+                var player = embed.getPlayer();
+                player.setChannel(chan);
+            }
+        </script>
+    </div>
+    <br>
+    <button class="twitch-button" onclick="changeChannel('goatrope'); changeText(1);">Goatrope</button>
+    <button class="twitch-button" onclick="changeChannel('sub_WHISTLE'); changeText(2);">sub_WHISTLE</button>
+    <button class="twitch-button" onclick="changeChannel('Vetro'); changeText(3);">Vetro</button>
+    <button class="twitch-button" onclick="changeChannel('Khan___'); changeText(4);">Khan</button>
+    <button class="twitch-button" onclick="changeChannel('LePhoque'); changeText(5);">LePhoque</button>
+    <button class="twitch-button" onclick="changeChannel('J2tehton'); changeText(6);">J2theTon</button>
+    <button class="twitch-button" onclick="changeChannel('desksol'); changeText(7);">Desksol</button>
+    <button class="twitch-button" onclick="changeChannel('scurty_'); changeText(8);">Scurty</button>
+    <button class="twitch-button" onclick="changeChannel('Savusukka'); changeText(9);">Savusukka</button>
+    <button class="twitch-button" onclick="changeChannel('Coldgrunter'); changeText(10);">ColdGrunter</button>
+    <button class="twitch-button" onclick="changeChannel('GarishGoblin'); changeText(11);">GarishGoblin</button>
+    <button class="twitch-button" onclick="changeChannel('DarkR41d3r'); changeText(12);">DarkR41d3r</button>
+    <button class="twitch-button" onclick="changeChannel('SilentWolfJH'); changeText(13);">SilentWolfJH</button>
+    <button class="twitch-button" onclick="changeChannel('Maxlew'); changeText(14);">Maxlew</button>
+    <button class="twitch-button" onclick="changeChannel('ChronosReturns'); changeText(15);">Chronos</button>
+    <button class="twitch-button" onclick="changeChannel('Cordiaxiz'); changeText(16);">Cordiaxiz</button>
+    <button class="twitch-button" onclick="changeChannel('Burnt_o'); changeText(17);">Burnt</button>
+    <br><br>
+    <p id="runner-description">Click on a runner you want to know more about!</p>
+
+</div>
+</body>
