@@ -1,4 +1,4 @@
-let playerGrid, fallingPiece, ghostPiece, paused;
+let playerGrid, fallingPiece, ghostPiece;
 let ghostMode = true;
 
 const width = 10;
@@ -17,8 +17,7 @@ function draw() {
     let curr = millis();
     let delta = curr - prev;
     prev = curr;
-    if (!paused)
-        fallingPiece.update(delta);
+    fallingPiece.update(delta);
     if (fallingPiece.timeToFall()) {
         fallingPiece.resetBuffer();
         fallingPiece.moveDown();
@@ -56,6 +55,18 @@ function hardDrop(piece, playfield) {
     piece.moveUp();
 }
 
+function mouseMoved() {
+    if (movedX / 10000 < 0) {
+        fallingPiece.moveLeft();
+        if (!playerGrid.isValid(fallingPiece))
+            fallingPiece.moveRight();
+    } else {
+        fallingPiece.moveRight();
+        if (!playerGrid.isValid(fallingPiece))
+            fallingPiece.moveLeft();
+    }
+}
+
 function mouseClicked() {
     hardDrop(fallingPiece, playerGrid);
     spawnNewPiece();
@@ -70,9 +81,6 @@ function keyPressed() {
         case 'r':
             spawnNewPiece();
             playerGrid.resetGrid();
-            break;
-        case 'p':
-            paused = !paused;
             break;
         case 'z':
             fallingPiece.rotateCCW();
@@ -98,3 +106,26 @@ function keyPressed() {
             break;
     }
 }
+
+console.log('keyboard')
+document.addEventListener('keydown', event => {
+    switch (event.keyCode) {
+        case 40:
+            fallingPiece.moveDown();
+            if (!playerGrid.isValid(fallingPiece))
+                fallingPiece.moveUp();
+            else
+                fallingPiece.resetBuffer();
+            break;
+        case 37:
+            fallingPiece.moveLeft();
+            if (!playerGrid.isValid(fallingPiece))
+                fallingPiece.moveRight();
+            break;
+        case 39:
+            fallingPiece.moveRight();
+            if (!playerGrid.isValid(fallingPiece))
+                fallingPiece.moveLeft();
+            break;
+    }
+});

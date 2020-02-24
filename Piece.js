@@ -1,3 +1,41 @@
+let types = {
+    O: [
+        ['#ff0', '#ff0'],
+        ['#ff0', '#ff0']
+    ],
+    J: [
+        ['#00F',  null ,  null ],
+        ['#00F', '#00F', '#00F'],
+        [ null ,  null ,  null ]
+    ],
+    L: [
+        [ null ,  null , '#FA0'],
+        ['#FA0', '#FA0', '#FA0'],
+        [ null ,  null ,  null ]
+    ],
+    S: [
+        [ null , '#0F0', '#0F0'],
+        ['#0F0', '#0F0',  null ],
+        [ null ,  null ,  null ]
+    ],
+    Z: [
+        ['#F00', '#F00',  null ],
+        [ null , '#F00', '#F00'],
+        [ null ,  null ,  null ]
+    ],
+    T: [
+        [ null , '#808',  null ],
+        ['#808', '#808', '#808'],
+        [ null ,  null ,  null ]
+    ],
+    I: [
+        [ null ,  null ,  null ,  null ],
+        ['#0FF', '#0FF', '#0FF', '#0FF'],
+        [ null ,  null ,  null ,  null ],
+        [ null ,  null ,  null ,  null ],
+    ]
+};
+
 class Piece {
 
     constructor(type, playfield, x, y) {
@@ -87,41 +125,3 @@ class Piece {
         this.cells = newCells;
     }
 }
-
-let types = {
-    O: [
-        ['#ff0', '#ff0'],
-        ['#ff0', '#ff0']
-    ],
-    J: [
-        ['#00F',  null ,  null ],
-        ['#00F', '#00F', '#00F'],
-        [ null ,  null ,  null ]
-    ],
-    L: [
-        [ null ,  null , '#FA0'],
-        ['#FA0', '#FA0', '#FA0'],
-        [ null ,  null ,  null ]
-    ],
-    S: [
-        [ null , '#0F0', '#0F0'],
-        ['#0F0', '#0F0',  null ],
-        [ null ,  null ,  null ]
-    ],
-    Z: [
-        ['#F00', '#F00',  null ],
-        [ null , '#F00', '#F00'],
-        [ null ,  null ,  null ]
-    ],
-    T: [
-        [ null , '#808',  null ],
-        ['#808', '#808', '#808'],
-        [ null ,  null ,  null ]
-    ],
-    I: [
-        [ null ,  null ,  null ,  null ],
-        ['#0FF', '#0FF', '#0FF', '#0FF'],
-        [ null ,  null ,  null ,  null ],
-        [ null ,  null ,  null ,  null ],
-    ]
-};

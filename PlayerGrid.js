@@ -1,16 +1,16 @@
 class PlayerGrid {
-    constructor(w, h) {
+    constructor(width, height) {
         this.foreground = [0];
         this.background = [170];
-        this.cols = w;
-        this.rows = h;
+        this.cols = width;
+        this.rows = height;
         this.grid = [];
         this.lines = 0;
         this.score = 0;
         this.level = 1;
         this.multiplier = 0;
         this.resetGrid();
-        this.cellSize = 21;
+        this.cellSize = 22;
         this.borderSize = 3;
         this.gridlines = false;
     }
