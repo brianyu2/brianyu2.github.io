@@ -3,6 +3,5 @@ For Art151
 
 
 
-p5Project
-![Tetris Image](/images/tetris.png)
-Format: ![Alt Text](url)
+p5Project Image
+![Tetris Image](/images/tetris.PNG)
