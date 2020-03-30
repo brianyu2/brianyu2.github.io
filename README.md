@@ -16,4 +16,6 @@ This is a playable game of tetris using p5. Still some errors, but main function
 # Web Narrative Project
 [The Outbreak](https://brianyu2.github.io/outbreak.html)
 
+This is a story line about a zombie apocalypse. Also contains a puzzle to solve to help find the cure.
+
 ![The Outbreak Image](/images/outbreak.PNG)
