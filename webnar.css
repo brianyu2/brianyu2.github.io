@@ -1,0 +1,127 @@
+body {
+    background: url("images/covid1.jpg") no-repeat center center fixed;
+    background-size: cover;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Ropa Sans', sans-serif;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+}
+
+#entry {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    font-size: 45px;
+    color: orangered;
+    -webkit-text-stroke: 2px black;
+}
+
+#title {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    font-size: 60px;
+    color: orangered;
+    -webkit-text-stroke: 2px black;
+}
+
+#start {
+    background-color: #f44336;
+    color: black;
+    border: 2px solid #dc3545;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    font-size: 20px;
+    padding: 14px 60px;
+}
+#start:hover {
+    background-color: #dc3545;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color: white;
+}
+
+p {
+    text-align: left;
+}
+
+#info {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    -ms-transform: translateY(90%);
+    transform: translateY(90%);
+    color: red;
+}
+
+#form {
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+}
+
+#solved {
+    -ms-transform: translateY(30%);
+    transform: translateY(30%);
+    align-items: center;
+    justify-content: center;
+    color: red;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.9);
+    position: relative;
+    padding: 10px 10px 10px 10px;
+    font-size: 20px;
+    text-align: center;
+    width: 50%;
+}
+
+#help {
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+#return {
+    margin-top: 10px;
+    margin-right: 100px;
+    top: 0;
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    background: black;
+    opacity: 0.8;
+    text-decoration: none;
+    font-size: 20px;
+}

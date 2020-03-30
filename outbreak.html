@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Outbreak | Title</title>
+    <link rel="stylesheet" href="webnar.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="webnarscript.js"></script>
+</head>
+<body>
+    <h1 id = "title">The Outbreak</h1>
+    <a href="story.html">
+    <button id = "start">Start</button>
+    </a>
+    <div id="info">
+        <form id="form" action="end.html" method="get">
+            First name:
+            <input type="text" id="fname" name="fname"><br><br>
+            Last name:
+            <input type="text" id="lname" name="lname"><br><br>
+            Code:
+            <input type="text" id="code" name="code"><br><br>
+            <input type="button" onclick="checkVals()" value="Submit Code">
+        </form>
+    </div>
+</body>
+</html>
