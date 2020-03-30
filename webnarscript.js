@@ -82,7 +82,7 @@ function checkVals() {
     var fname = document.getElementById("fname").value;
     var lname = document.getElementById("lname").value;
     var code = document.getElementById("code").value;
-    if (fname === "edward" && lname === "johnson" && code === "116376598259352367") {
+    if (fname.toLowerCase() === "edward" && lname.toLowerCase() === "johnson" && code === "116376598259352367") {
         window.open(
             "end.html", "_blank");
     } else {
