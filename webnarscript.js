@@ -79,8 +79,8 @@ function typeWriter8() {
 }
 
 function checkVals() {
-    var fname = document.getElementById("fname").value;
-    var lname = document.getElementById("lname").value;
+    var fname = document.getElementById("fname").value.toLowerCase();
+    var lname = document.getElementById("lname").value.toLowerCase();
     var code = document.getElementById("code").value;
     if (fname.toLowerCase() === "edward" && lname.toLowerCase() === "johnson" && code === "116376598259352367") {
         window.open(
