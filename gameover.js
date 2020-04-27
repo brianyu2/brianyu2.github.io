@@ -6,7 +6,7 @@ function GameOver()
     {
         // find a different scene using the SceneManager
         oGame = this.sceneManager.findScene( Game ).oScene;
-    }
+    };
 
     this.draw = function()
     {
@@ -14,7 +14,9 @@ function GameOver()
         image( this.sceneManager.bkImage, 0, 0);
 
         // invoke a method from a different scene
-
+        if (oGame.getPlaying()) {
+            oGame.stopPlaying();
+        }
         oGame.displayGlobalBalls();
         if (oGame.getScore() > 200000 && (oGame.getMisses() === 0)) {
             textSize( 60);

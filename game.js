@@ -10,7 +10,7 @@ function Game() {
     var maxCombo;
     var accuracy;
     var specialKey;
-
+    var playing;
     // take this in a local variable to allow easy access to
     // this instace from within local functions
     var me = this;
@@ -20,23 +20,25 @@ function Game() {
         textAlign(LEFT);
         initGame();
         song.play(2.8);
-        setTimeout(function () {
-            if (keyCombo > maxCombo) {
-                maxCombo = keyCombo;
-            }
-            me.sceneManager.showScene(GameOver)
-        }, 204000);
+        if (playing) {
+            setTimeout(function () {
+                if (keyCombo > maxCombo) {
+                    maxCombo = keyCombo;
+                }
+                me.sceneManager.showScene(GameOver)
+            }, 204000);
+        }
     };
 
     this.draw = function () {
         rect(0, 647.5, 1366, 5);
-        rect(408, 0, 10, 768);
-        rect(498, 0, 10, 768);
-        rect(588, 0, 10, 768);
-        rect(678, 0, 10, 768);
-        rect(768, 0, 10, 768);
-        rect(858, 0, 10, 768);
-        rect(948, 0, 10, 768);
+        rect(413, 0, 10, 768);
+        rect(503, 0, 10, 768);
+        rect(593, 0, 10, 768);
+        rect(683, 0, 10, 768);
+        rect(773, 0, 10, 768);
+        rect(863, 0, 10, 768);
+        rect(953, 0, 10, 768);
         text("S", 453, height - 80);
         text("D", 543, height - 80);
         text("F", 633, height - 80);
@@ -72,6 +74,14 @@ function Game() {
         return keysMissed;
     };
 
+    this.getPlaying = function () {
+        return playing;
+    };
+
+    this.stopPlaying = function () {
+        playing = false;
+    };
+
     function initGame() {
         keys = [];
         keysMissed = 0;
@@ -80,7 +90,7 @@ function Game() {
         multiplier = 1;
         failCount = 0;
         maxCombo = 0;
-
+        playing = true;
         setTimeout(function () {
             addBall(keys);
         }, 300);
@@ -136,16 +146,16 @@ function Game() {
     function displayStats() {
         if (accuracy === "Perfect!!") {
             fill("Yellow");
-            text(accuracy, width/2, 250);
+            text(accuracy, width/2-15, 250);
         } else if (accuracy === "Great!") {
             fill("Green");
-            text(accuracy, width/2, 250);
+            text(accuracy, width/2-15, 250);
         } else if (accuracy === "Good") {
             fill("Blue");
-            text(accuracy, width/2, 250);
+            text(accuracy, width/2-15, 250);
         } else if (accuracy === "Miss") {
             fill("Red");
-            text(accuracy, width/2, 250);
+            text(accuracy, width/2-15, 250);
         }
         fill("black");
         text("Score: " + keyScore, 10, height - 80);
@@ -158,7 +168,7 @@ function Game() {
         for (var i = 0; i < arBalls.length; i++) {
             if (key === 's') {
                 var ball = arBalls[i];
-                if (ball.x === 458 && (ball.y > 625 && ball.y < 675)) {
+                if (ball.x === 463 && (ball.y > 625 && ball.y < 675)) {
                     if (ball.y > 645 && ball.y < 655) {
                         accuracy = "Perfect!!";
                     } else if (ball.y > 635 && ball.y < 665) {
@@ -170,7 +180,7 @@ function Game() {
                 }
             } else if (key === 'd') {
                 var ball = arBalls[i];
-                if (ball.x === 548 && (ball.y > 625 && ball.y < 675)) {
+                if (ball.x === 553 && (ball.y > 625 && ball.y < 675)) {
                     if (ball.y > 645 && ball.y < 655) {
                         accuracy = "Perfect!!";
                     } else if (ball.y > 635 && ball.y < 665) {
@@ -182,7 +192,7 @@ function Game() {
                 }
             } else if (key === 'f') {
                 var ball = arBalls[i];
-                if (ball.x === 638 && (ball.y > 625 && ball.y < 675)) {
+                if (ball.x === 643 && (ball.y > 625 && ball.y < 675)) {
                     if (ball.y > 645 && ball.y < 655) {
                         accuracy = "Perfect!!";
                     } else if (ball.y > 635 && ball.y < 665) {
@@ -194,7 +204,7 @@ function Game() {
                 }
             } else if (key === 'j') {
                 var ball = arBalls[i];
-                if (ball.x === 728 && (ball.y > 625 && ball.y < 675)) {
+                if (ball.x === 733 && (ball.y > 625 && ball.y < 675)) {
                     if (ball.y > 645 && ball.y < 655) {
                         accuracy = "Perfect!!";
                     } else if (ball.y > 635 && ball.y < 665) {
@@ -206,7 +216,7 @@ function Game() {
                 }
             } else if (key === 'k') {
                 var ball = arBalls[i];
-                if (ball.x === 818 && (ball.y > 625 && ball.y < 675)) {
+                if (ball.x === 823 && (ball.y > 625 && ball.y < 675)) {
                     if (ball.y > 645 && ball.y < 655) {
                         accuracy = "Perfect!!";
                     } else if (ball.y > 635 && ball.y < 665) {
@@ -218,7 +228,7 @@ function Game() {
                 }
             } else if (key === 'l') {
                 var ball = arBalls[i];
-                if (ball.x === 908 && (ball.y > 625 && ball.y < 675)) {
+                if (ball.x === 913 && (ball.y > 625 && ball.y < 675)) {
                     if (ball.y > 645 && ball.y < 655) {
                         accuracy = "Perfect!!";
                     } else if (ball.y > 635 && ball.y < 665) {
@@ -300,21 +310,21 @@ function Game() {
 
 
     function initKey(key) {
-        key.x = random([548, 638, 728, 818]);
+        key.x = random([553, 643, 733, 823]);
         key.y = 10;
         key.color = "orange";
         key.size = 60;
     }
 
     function initKey2(key) {
-        key.x = random([548, 638, 728, 818]);
+        key.x = random([553, 643, 733, 823]);
         key.y = 110;
         key.color = "orange";
         key.size = 60;
     }
 
     function initSpecialKey(key) {
-        key.x = random([458, 908]);
+        key.x = random([463, 913]);
         key.y = 10;
         key.color = "blue";
         key.size = 60;
