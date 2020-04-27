@@ -23,11 +23,10 @@ function GameOver()
 
         textSize(16);
         text("Score: " + oGame.getScore(), width / 2, height / 2 + 20);
+        text("Click to restart game...", width / 2, height - 20);
+    };
 
-        text("Press any key to restart game...", width / 2, height - 20);
-    }
-
-    this.keyPressed = function()
+    this.mousePressed = function()
     {
         this.sceneManager.showScene( Intro );
     }
