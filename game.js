@@ -7,7 +7,8 @@ function Game() {
     var keyScore;
     var multiplier;
     var failCount;
-
+    var maxCombo;
+    var accuracy;
     var specialKey;
 
     // take this in a local variable to allow easy access to
@@ -15,11 +16,14 @@ function Game() {
     var me = this;
 
     this.enter = function () {
-        textSize(12);
+        textSize(18);
         textAlign(LEFT);
         initGame();
         song.play(2.8);
         setTimeout(function () {
+            if (keyCombo > maxCombo) {
+                maxCombo = keyCombo;
+            }
             me.sceneManager.showScene(GameOver)
         }, 204000);
     };
@@ -33,7 +37,12 @@ function Game() {
         rect(768, 0, 10, 768);
         rect(858, 0, 10, 768);
         rect(948, 0, 10, 768);
-
+        text("S", 453, height - 80);
+        text("D", 543, height - 80);
+        text("F", 633, height - 80);
+        text("J", 723, height - 80);
+        text("K", 813, height - 80);
+        text("L", 903, height - 80);
         image(this.sceneManager.bkImage, 0, 0);
         displayKeys(keys);
         updateKeys(keys);
@@ -55,6 +64,14 @@ function Game() {
         return keyScore;
     };
 
+    this.getCombo = function () {
+        return maxCombo;
+    };
+
+    this.getMisses = function () {
+        return keysMissed;
+    };
+
     function initGame() {
         keys = [];
         keysMissed = 0;
@@ -62,6 +79,7 @@ function Game() {
         keyScore = 0;
         multiplier = 1;
         failCount = 0;
+        maxCombo = 0;
 
         setTimeout(function () {
             addBall(keys);
@@ -73,14 +91,14 @@ function Game() {
 
     function catchBall(ball) {
         if (failCount < maxRowMisses) {
-            if (keyCombo > 20) {
+            if (keyCombo > 40) {
+                multiplier = 5;
+            } else if (keyCombo > 30) {
                 multiplier = 4;
-            } else if (keyCombo > 15) {
+            } else if (keyCombo > 20) {
                 multiplier = 3;
             } else if (keyCombo > 10) {
                 multiplier = 2;
-            } else if (keyCombo > 5) {
-                multiplier = 1.5;
             } else {
                 multiplier = 1;
             }
@@ -116,11 +134,24 @@ function Game() {
     }
 
     function displayStats() {
+        if (accuracy === "Perfect!!") {
+            fill("Yellow");
+            text(accuracy, width/2, 250);
+        } else if (accuracy === "Great!") {
+            fill("Green");
+            text(accuracy, width/2, 250);
+        } else if (accuracy === "Good") {
+            fill("Blue");
+            text(accuracy, width/2, 250);
+        } else if (accuracy === "Miss") {
+            fill("Red");
+            text(accuracy, width/2, 250);
+        }
         fill("black");
         text("Score: " + keyScore, 10, height - 80);
         text("Multiplier: " + multiplier + "x", 10, height - 60)
-        text("Combo: " + keyCombo, 10, height - 40);
-        text("Misses: " + keysMissed, 10, height - 20);
+        text("Combo: x" + keyCombo, 10, height - 40);
+        text("Misses: x" + keysMissed, 10, height - 20);
     }
 
     function findHitBall(arBalls, key) {
@@ -128,31 +159,73 @@ function Game() {
             if (key === 's') {
                 var ball = arBalls[i];
                 if (ball.x === 458 && (ball.y > 625 && ball.y < 675)) {
+                    if (ball.y > 645 && ball.y < 655) {
+                        accuracy = "Perfect!!";
+                    } else if (ball.y > 635 && ball.y < 665) {
+                        accuracy = "Great!";
+                    } else {
+                        accuracy = "Good";
+                    }
                     return ball;
                 }
             } else if (key === 'd') {
                 var ball = arBalls[i];
                 if (ball.x === 548 && (ball.y > 625 && ball.y < 675)) {
+                    if (ball.y > 645 && ball.y < 655) {
+                        accuracy = "Perfect!!";
+                    } else if (ball.y > 635 && ball.y < 665) {
+                        accuracy = "Great!";
+                    } else {
+                        accuracy = "Good";
+                    }
                     return ball;
                 }
             } else if (key === 'f') {
                 var ball = arBalls[i];
                 if (ball.x === 638 && (ball.y > 625 && ball.y < 675)) {
+                    if (ball.y > 645 && ball.y < 655) {
+                        accuracy = "Perfect!!";
+                    } else if (ball.y > 635 && ball.y < 665) {
+                        accuracy = "Great!";
+                    } else {
+                        accuracy = "Good";
+                    }
                     return ball;
                 }
             } else if (key === 'j') {
                 var ball = arBalls[i];
                 if (ball.x === 728 && (ball.y > 625 && ball.y < 675)) {
+                    if (ball.y > 645 && ball.y < 655) {
+                        accuracy = "Perfect!!";
+                    } else if (ball.y > 635 && ball.y < 665) {
+                        accuracy = "Great!";
+                    } else {
+                        accuracy = "Good";
+                    }
                     return ball;
                 }
             } else if (key === 'k') {
                 var ball = arBalls[i];
                 if (ball.x === 818 && (ball.y > 625 && ball.y < 675)) {
+                    if (ball.y > 645 && ball.y < 655) {
+                        accuracy = "Perfect!!";
+                    } else if (ball.y > 635 && ball.y < 665) {
+                        accuracy = "Great!";
+                    } else {
+                        accuracy = "Good";
+                    }
                     return ball;
                 }
             } else if (key === 'l') {
                 var ball = arBalls[i];
                 if (ball.x === 908 && (ball.y > 625 && ball.y < 675)) {
+                    if (ball.y > 645 && ball.y < 655) {
+                        accuracy = "Perfect!!";
+                    } else if (ball.y > 635 && ball.y < 665) {
+                        accuracy = "Great!";
+                    } else {
+                        accuracy = "Good";
+                    }
                     return ball;
                 }
             } else {
@@ -177,6 +250,10 @@ function Game() {
         if (ball.y > height) {
             keysMissed++;
             failCount++;
+            accuracy = "Miss";
+            if (keyCombo > maxCombo) {
+                maxCombo = keyCombo;
+            }
             keyCombo = 0;
             if (failCount >= maxRowMisses) {
                 song.stop();
