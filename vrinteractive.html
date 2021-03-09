@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Virtual Reality Scene | Brian Yu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="arvr.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:rgb(44, 44, 44)">
+    <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="index.html">Brian Yu</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-left">
+              <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="">Projects
+                      <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="vrar.html">VR/AR Projects</a></li>
+                      <li><a href="witchfire.html">Witchfire</a></li>
+                      <li><a href="websites.html">Additional Websites</a></li>
+                      <li><a href="media.html">Music and Media</a></li>
+                  </ul>
+                  </li>
+              <li><a href="experience.html">Experience</a></li>
+              <li><a href="skills.html">Skills</a></li>
+              <li><a href="personal.html">Personal Life</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="resume.html">Resume</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="main-text">
+    <h1>Interactive Virtual Reality Scene</h1>
+    <h3>Introduction</h3>
+    <p>
+        This project is focused on demonstrating virtual reality with seeing and interacting within an area. <br>
+        This is done by displaying a classroom space that I have created within a theme.<br>
+        This project also demonstrates familiarity with programming using virtual reality and how simulators are used to show these spaces.<br>
+    </p>
+    <h4>Demonstration</h4>
+    <iframe class="youtube-frame" width="853" height="505" frameborder="0" gesture="media" allow="autoplay; encrypted-media" allowfullscreen
+                src="https://www.youtube.com/embed/QPKM6zuowno">
+    </iframe>
+    <h4>Instructions</h4>
+    <p>
+        Recommended - Unity 2019.4.1f1 and VRTK 3 <br>
+        Run the application in the Unity interface. <br>
+        The controls for moving around and interacting with the environment are found when running the application. <br>
+        List of standard controls:
+        <ul>
+            <li>Toggle Controls Hints: F1</li>
+            <li>Toggle Mouse Lock: F4</li>
+            <li>Movement: WASD</li>
+            <li>Sprint modifier: Left Shift</li>
+            <li>Look direction: Mouse</li>
+            <li>Switch to controller: Left Alt</li>
+            <li>Distance pickup modifier: Left Ctrl</li>
+            <li>Left Hand interactions: Mouse 1</li>
+            <li>Right Hand interactions: Mouse 2</li>
+            <li>Teleporting: Q</li>
+        </ul>
+    </p>
+    <h4>Download Unity3D - <a href="https://unity3d.com/">https://unity3d.com/</a></h4>
+    <p>Install the following from UnityHub: 
+        <ul>
+            <li>Unity</li>
+            <li>Documentation</li>
+            <li>Windows Build Support (Mono)</li>
+            <li>Mac Build Support if you want to develop on a Mac</li>
+            <li>Linux Build Support if you want to develop on a Linux machine</li>
+        </ul>
+    </p>
+    <h4>Download VRTK - <a href="https://vrtoolkit.readme.io/docs">https://vrtoolkit.readme.io/docs</a></h4>
+    <p>If developing using a specific SDK, here are the supported SDKs with their download links
+        <ul>
+            <li>VR Simulator: Included with the standard download</li>
+            <li>Steam VR 1.2.3: <a href="https://github.com/ValveSoftware/steamvr_unity_plugin/releases/download/1.2.3/SteamVR.Plugin.unitypackage">https://vrtoolkit.readme.io/docs</a></li>
+            <li>Oculus: <a href="https://developer.oculus.com/downloads/package/oculus-utilities-for-unity-5/">https://developer.oculus.com/downloads/package/oculus-utilities-for-unity-5/</a></li>
+            <li>Ximmerse: <a href="https://github.com/Ximmerse/SDK/tree/master/Unity">https://github.com/Ximmerse/SDK/tree/master/Unity</a></li>
+            <li>Daydream: <a href="https://developers.google.com/vr/unity/download">https://developers.google.com/vr/unity/download</a></li>
+        </ul>
+    </p>
+    <h4>Download and install the project: <a href="https://github.com/brianyu2/Interactive-Virtual-Reality-Scene">Interactive Virtual Reality Scene Download </a></h4>
+    <p>
+        Open project with Unity. <br>
+        Open the EVL scene<br> 
+        Press the play button and you should be able to run the VRTK simulator within the Unity application.
+    </p>
+    <h3>Project Sample Images</h3>
+    <img src="images/BaseScene.PNG">
+    <br>
+        <p class="image-description">How the EVL Scene should look when the project is opened.</p>
+    <br>
+    <img src="images/StartScene.PNG">
+    <br>
+        <p class="image-description">How the scene should look once the project starts running. Hints are hidden here.</p>
+    <br>
+    <img src="images/Angle1.PNG">
+    <br>
+        <p class="image-description">Alternate angle of the scene showing the full classroom. Shows how the classroom takes on a more relaxed theme where students can lounge.</p>
+    <br>
+    <img src="images/Angle2.PNG">
+
+    <br>
+        <p class="image-description">Angle showing myself with all the materials on the desk that are interactive and able to be picked up.</p>
+    <br>
+    <img src="images/Holding.PNG">
+    <br>
+        <p class="image-description">Demonstration of me holding a tape holder.</p>
+    <br>
+    <img src="images/Objects.PNG">
+    <br>
+        <p class="image-description">Image showing the chip bags that get spawned in and have standard object physics.</p>
+    <br>
+    <img src="images/Radio.PNG">
+    <br>
+        <p class="image-description">Image of the interactive radio that plays music.</p>
+    <br>
+    <img src="images/Lighting.PNG">
+    <br>
+        <p class="image-description">Image that demonstrates the alternate lighting using lamps that are spread out within the room. The standard lights are off in this image.</p>
+    <br>
+    <h3>Resources Used:</h3>
+    <p>
+        Unity Assets:
+        Some of the Unity assets that are used are found from the base project, which can be found <a href="https://www.evl.uic.edu/aej/428/428F20P3.zip"> here</a>
+        <ul>
+            <li><a href="http://www.makehumancommunity.org/">MakeHuman Community</a> was used to create the human models of all the characters</li>
+            <li><a href="https://www.mixamo.com/#//">Mixamo</a> was used to create the animations for these models.</li>
+            <li><a href="https://assetstore.unity.com/packages/3d/props/interior/snack-machines-3517">Snack Machines</a> by VIS Games</li>
+            <li><a href="https://assetstore.unity.com/packages/3d/props/interior/old-radio-ocean-72923">Old Radio "Ocean"</a> by IL.ranch</li>
+            <li><a href="https://assetstore.unity.com/packages/3d/props/office-supplies-low-poly-105519">Office Supplies Low Poly</a> by Sten Ulfsson</li>
+            <li><a href="https://assetstore.unity.com/packages/3d/props/food/free-casual-food-pack-mobile-vr-85884">FREE Casual Food Pack - Mobile/VR</a> by Lumo-Art 3D</li>
+            <li><a href="https://assetstore.unity.com/packages/3d/props/electronics/hq-laptop-computer-42030">HQ Laptop Computer</a> by Next Level 3D</li>
+            <li><a href="https://assetstore.unity.com/packages/3d/props/furniture/toon-furniture-88740">Toon Furniture</a> by Elcanetay</li>
+            <li><a href="https://assetstore.unity.com/packages/3d/props/interior/lamp-model-110960">Lamp Model</a> by Harpet Studio</li>
+        </ul>
+        Sounds:
+        <ul>
+            <li>The music playing from the radio was created and composed by me. <br> The link to the music is here: <a href="https://musescore.com/user/19152/scores/3097016">The Last Battle</a></li>
+            <li><a href="http://soundbible.com/496-Keyboard-Typing-Slow.html">Keyboard Typing Slow Sound</a> by Anonymous</li>
+            <li><a href="http://soundbible.com/2081-Coin-Drop.html">Coin Drop Sound</a> by Willem Hunt</li>
+        </ul>
+    </p>
+    <h4>Project Conclusion</h4>
+    <p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Virtual reality is becoming a major influence in the world nowadays, with its popularity skyrocketing over the past few years through all sorts of media and demonstrations. From games, movies, interactive demonstrations, and all sorts of other unique methods, many virtual reality related things are becoming mainstream. This is due to the unique experience you can get from seeing and interacting with people and objects in a purely synthetic world in ways that are extremely unique. This is beneficial by allowing us to do things such as a training or teaching others, allowing us to explore and experience events and locations that would not be possible for everyone, and further increase what we can look at and achieve with future technology.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The main unique feature that virtual reality accomplishes that cannot be done by other forms of technology is enabling us to interact and see others. This makes it possible for us to use virtual reality in training and educating others through this ability that virtual reality has. For instance, if we were needed to learn at home or needed to take courses or understand something that generally needs in person experience, virtual reality can become a major helper by allowing us to interact and understand things from anywhere. An example of this can be in surgery or other dangerous occupations that requires well trained individuals, people can use virtual reality as a simulation to understand what it feels like doing these activities rather than watching from afar. Likewise, from a teaching experience, it is highly beneficial to be able to show and explain topics through firsthand experience from watching others, and by placing someone in a first person point of view experience to comprehend things such as the above definitely makes it easier and gives more understanding to the students or amateurs.<br>
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Similarly, virtual reality allows us to experience events and locations that most people would not be able to experience in their lives. Unlike the first topic discussed on teaching others, this idea makes us able to show things that can be fictional, opening us up to experience an imaginary environment as if we were there in real life. While standard games and movies can do this on a screen, it is not as realistic as virtual reality where moving around, seeing, and interacting with objects increases this experience by a huge margin as it stimulates many more of our senses such as touch and movement that we can not get from just a standard screen.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Furthermore, virtual reality enables us to look at what can be possible in the future with our technology. With all sorts of advances in artificial intelligence and machine learning, along with machines becoming more powerful and efficient. Virtual reality itself can become a more realistic experience than it is even now, by making headsets smaller and more realistic, to possibly even transforming an entire room in a unique fashion for all users. As of right now, many changes can be seen with the transforming technology of virtual reality with the headsets themselves becoming more powerful with better tracking and more applications that are using virtual reality, and some time in the near future who knows what this technology can bring.<br>
+    </p>
+</div>
+</body>
+</html>

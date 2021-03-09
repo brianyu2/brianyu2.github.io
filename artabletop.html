@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabletop and Lifesized Augmented Reality | Brian Yu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="arvr.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:rgb(44, 44, 44)">
+    <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="index.html">Brian Yu</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-left">
+              <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="">Projects
+                      <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="vrar.html">VR/AR Projects</a></li>
+                      <li><a href="witchfire.html">Witchfire</a></li>
+                      <li><a href="websites.html">Additional Websites</a></li>
+                      <li><a href="media.html">Music and Media</a></li>
+                  </ul>
+                  </li>
+              <li><a href="experience.html">Experience</a></li>
+              <li><a href="skills.html">Skills</a></li>
+              <li><a href="personal.html">Personal Life</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="resume.html">Resume</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="main-text">
+    <h1>Tabletop and Lifesized Augmented Reality</h1>
+    <h3>Introduction</h3>
+    <p>
+        This project is focused on demonstrating additional uses of augmented reality on both a tabletop and lifesize scale. 
+        This is done by displaying a virtual version of myself using an action figure onto a playset.
+        The playset also contains an animated figure with a Vuforia button to be able to use in augmented reality, along with enabled collision using balls that can be spawned in by clicking within the scene.
+    </p>
+    <h4>Demonstration</h4>
+    <iframe class="youtube-frame" width="853" height="505" frameborder="0" gesture="media" allow="autoplay; encrypted-media" allowfullscreen
+                src="https://www.youtube.com/embed/hYQn2Q2T1EA">
+                
+    </iframe>
+    <h4>Instructions</h4>
+    <p>
+        Recommended - Unity 2019.4.1f1 and Vuforia 9. <br>
+        Run the application in the Unity interface. <br>
+        Requires a webcam or other camera. <br>
+        Also requires Vuforia Mars Fiducial Markers to display each widget. <br>
+        Images include the following: <br>
+        <ul>
+            <li>Astronaut Marker - Basic Table Top Playset</li>
+            <li>Drone Marker - Actual Table Top Playset with Physics</li>
+        </ul>
+    </p>
+    <h4>Download Unity3D - <a href="https://unity3d.com/">https://unity3d.com/</a></h4>
+    <p>Install the following from UnityHub: 
+        <ul>
+            <li>Unity</li>
+            <li>Documentation</li>
+            <li>Windows Build Support (Mono)</li>
+            <li>Mac Build Support if you want to develop on a Mac</li>
+            <li>Linux Build Support if you want to develop on a Linux machine</li>
+        </ul>
+    </p>
+    <p>
+        After finishing Unity installation of 2019.4.1f1 with Unity Hub, create a Vuforia developer account: <a href="https://developer.vuforia.com/">Vuforia Link</a> <br>
+
+    </p>
+    <h4>Download and install the project: <a href="https://github.com/brianyu2/Tabletop-and-Lifesized-Augmented-Reality">Tabletop and Lifesized Augmented Reality Download </a></h4>
+    <h4>Download the images: <a href="http://www.evl.uic.edu/aej/428/20files/4%20mars%20markers.png">Mars Markers</a></h4>
+    <p>
+        Open project with Unity. <br>
+        Open whichever scene that you want to use. <br> 
+        The Tabletop scene allows the use of both the interactive and the table top views using the Vuforia image targets. <br>
+        The Lifesize scene does not require a Vuforia image widget.
+        Have the astronaut and the drone images which can be found in the images linked above, can be either an actual printed picture or a web image brought up on phone or other device. <br>
+    </p>
+    <p>
+        <br>
+        The scenes:
+        <ul>
+            <li>Tabletop - Shows the tabletop and basic playset</li>
+            <li>Lifesize - Shows the lifesized playset</li>
+        </ul>
+    </p>
+    <img src="images/tabletopfull.PNG">
+    <br>
+        <p class="image-description">How the "Tabletop" scene should look when opened.</p>
+    <br>
+    <img src="images/lifesizefull.PNG">
+    <br>
+        <p class="image-description">How the "Lifesize" scene should look when opened.</p>
+    <br>
+    
+    <img src="images/basicplayset.PNG">
+    <br>
+        <p class="image-description">The basic playset with Vuforia button to control animation and sound.</p>
+    <br>
+    <img src="images/tabletop.PNG">
+    <br>
+        <p class="image-description">The tabletop playset which has collision and physics capabilities.</p>
+    <br>
+    <img src="images/lifesize.PNG">
+    <br>
+        <p class="image-description">The lifesize playset which scales the playset to a more realistic size.</p>
+    <br>
+    <h3>Resources Used:</h3>
+    <p>
+        
+        Unity Assets:
+        <ul>
+            <li><a href="https://assetstore.unity.com/packages/3d/food-pack-3d-microgames-add-ons-163295">Food pack - 3D Microgames Add-Ons</a> by Unity Technologies</li>
+            <li><a href="https://assetstore.unity.com/packages/2d/textures-materials/floors/hand-painted-grass-texture-78552">Hand Painted Grass Texture</a> by LowlyPoly</li>
+            <li><a href="https://assetstore.unity.com/packages/3d/props/hq-pbr-old-retro-radio-free-180303">HQ PBR Old Retro Radio (Free)y</a> by PHOS digital</li>
+            <li><a href="https://assetstore.unity.com/packages/3d/vegetation/plants/lowpoly-flowers-47083">Lowpoly Flowers</a> by chlyang</li>
+            <li><a href="https://assetstore.unity.com/packages/3d/props/parks-and-nature-pack-lite-77362">Parks and Nature Pack - Lite</a> by Gamemag Creation Studio</li>
+            <li><a href="https://assetstore.unity.com/packages/3d/props/exterior/rock-package-118182">Rock package</a> by shui861wy</li>
+            <li><a href="https://assetstore.unity.com/packages/3d/props/furniture/summer-open-air-table-and-chair-94677">Summer Open-Air Table And Chair</a> by 3 WHITE LINES</li>
+            <li><a href="https://assetstore.unity.com/packages/2d/textures-materials/texture-pack-bricks-n-blocks-180041">Texture Pack Bricks 'n Blocks</a> by GlowFox Games</li>
+        </ul>
+        Sounds:
+        <ul>
+            <li><a href="http://soundbible.com/1661-Sunny-Day.html">Sunny Day Sound</a> by stephan</li>
+        </ul>
+    </p>
+    <h4>Project Conclusion</h4>
+    <p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This project looks at the potential uses of augmented reality using play sets that are both tabletop and life-sized using models which are animated and have collision. In the future, I believe that there can be a couple uses of this technology, especially using augmented reality glasses which will become more common in the future. From being used by kids in a simulation style game, and by how unique the possibilities are in being able to see yourself and interact with objects in augmented reality, using modeled play sets have much potential.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One main reason for the use of play sets such as this would be to allow kids to play a simulation style game in augmented reality. By being able to interact with objects on a screen in real life is a major aspect of this technology which can be seen as being unique, especially through the use of Vuforia buttons enabling us the ability to control things within a scene. As technology advances and with more work, with larger teams with specialization, a lot of benefits can come with this by better designed models, better interaction with the ability to do more than just a simple animation, such as a full on simulation styled game. I believe that kids would really enjoy doing this as you can have the ability to make the figure do whatever you want, such as things that you would not even imagine such as be in outer space or in the deep parts of the ocean or even in a fictional land or area. I believe this aspect can be cool for kids to enjoy because it would open their imagination to all sorts of new outcomes and the that you can be able to interact within the scene improves this even further.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Not only would this technology be useful for kids, but it would also be useful to help display applications of things working in real life. For instance, they can be used such as blueprints for architects or for project leaders to demonstrate people’s individual tasks by using life-sized models which can display more information in an interactive way. Normally it would be much more difficult to do this by just having standard images, but an interactive display like the scenes that we built would display and highlight some of these points in a clearer way.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This project also showcases the different uses of using a smaller desk figure and a life-sized figure in augmented reality. Each one has their own major benefits and disadvantages. For instance, a life-sized figure has the benefit of being able to reflect the virtual world to a realistic size and setting, especially if you want to showcase a real sized model of yourself. However, it requires much more space to do this, along with generally having a good camera and large display to show the entire setting more easily. The smaller desk sized figure has a benefit of not requiring as much space and the ability to be used freely almost anywhere, while it might be the most realistic way to show the objects within the scene.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As a result, augmented reality featuring play sets can have multiple benefits for both kids and adults in many ways, from being used in a simulation game to inside a workplace environment. Likewise, the different sizes of these play sets also have specific uses for each situation that can be used beneficially for the task and the equipment that we have, and thus these play sets clearly have many useful uses in our society today. <br>
+    </p>
+</div>
+</body>
+</html>

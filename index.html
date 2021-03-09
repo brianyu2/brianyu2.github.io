@@ -1,50 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
   <title>Brian Yu | Home Page</title>
-  <link rel="stylesheet" href="home.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="home.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 </head>
 <body>
-<nav class="navbar navbar-inverse">
-  <a class="navbar-brand" href="index.html">Brian Yu | Home Page</a>
-  <div class="container-fluid">
-    <ul class="nav navbar-nav">
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="fanpage.html">Projects
-          <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="ce.html">Witchfire</a></li>
-          <li><a href="runners.html">Github Projects</a></li>
-          <li><a href="start.html">Additional Websites</a></li>
-          <li><a href="history.html">Music and Media</a></li>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Brian Yu</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-left">
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="">Projects
+              <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="vrar.html">VR/AR Projects</a></li>
+              <li><a href="witchfire.html">Witchfire</a></li>
+              <li><a href="websites.html">Additional Websites</a></li>
+              <li><a href="media.html">Music and Media</a></li>
+            </ul>
+          </li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="personal.html">Personal Life</a></li>
         </ul>
-      </li>
-      <li><a href="p5project.html">Experience</a></li>
-      <li><a href="#">Skills</a></li>
-      <li><a href="#"></a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Resume</a></li>
-      <li><a href="#">About Me</a></li>
-    </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="resume.html">Resume</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid bg-1">
+    <div class="row">
+      <div class="col-md-6 me-img">
+        <img src="images/me.png" class="img-fluid" alt="" />
+      </div>
+      <div class="col-md-6 self-description">
+        <h1 class="margin text-center">Brian Yu</h1>
+        <h4 class="subheading text-center">Computer Science student passionate about software engineering and design.
+          <br><br>
+          Also interested in frontend and backend development.</h4>
+        <br>
+        <p class="text-muted">My name is Brian Yu, I'm currently studying at University of Illinois at Chicago, pursuing
+          a Bachelor's degree in computer science.
+          <br>I am currently working as a TA for a Machine Organizations course here at UIC.
+          <br>This is my portfolio which showcases some of my current and past projects that I helped with. It also
+          contains more information about the technical skills that I have.
+          <br>Besides programming, I enjoy doing many activities including gaming, playing table tennis, and unicycling!
+      </div>
+    </div>
   </div>
-</nav>
-<h1>Brian Yu | Home Page</h1>
-<p>My name is Brian Yu, I'm currently studying at University of Illinois at Chicago, pursuing a Bachelor's degree in computer science. 
-This is my portfolio which showcases some of my current and past projects that I helped with. It also contains more information about the technical skills that I have.
 
-Besides programming, I enjoy doing many activities including gaming, playing table tennis, and unicycling! I also like to play chess and compose music.
+  <div class="container-fluid bg-3 text-center">
+    <h2>Projects</h2>
+    <br>
+    <div class="row">
+      <div class="col-sm-4">
+        <img src="images/StartScene.PNG" class="img-responsive margin" style="width:100%" alt="Image">
+        <h3>VR Projects</h3>
+        <p>Virtual and Augmented Reality Projects created in Unity using the Vuforia.</p>
+      </div>
+      <div class="col-sm-4">
+        <img src="images/Witchfire.png" class="img-responsive margin" style="width:100%" alt="Image">
+        <h3>Witchfire</h3>
+        <p>2D Bullet Hell / Hack and Slash styled game made with the Unity Engine.</p>
+      </div>
+      <div class="col-sm-4">
+        <img src="images\ce.PNG" class="img-responsive margin" style="width:100%" alt="Image">
+        <h3>Web Development</h3>
+        <p>Personal websites created using HTML/CSS, JavaScript, and p5.js library.</p>
+      </div>
+    </div>
+  </div>
 
-If you would like to know more about me, please contact me at briany2@uic.edu, or call me at 331-551-4986.</p>
-<ul>Fanpage Project</ul>
-<ul>p5 Project</ul>
-<ul>Web Narrative Project</ul>
-<ul>Advanced p5 Project</ul>
-<ul>Final Project Proposal</ul>
-<ul>Final Project</ul>
-<p></p>
+  <!-- Footer -->
+  <footer class="container-fluid bg-4 text-center">
+    <div id="contact" class="container">
+      <h2 class="my-name">Brian Yu</h2>
+      <a href="https://www.linkedin.com/in/brian-yu-94667012a/" class="fa fa-linkedin"></a>
+      <a href="https://github.com/brianyu2" class="fa fa-github"></a>
+      <a href="https://www.facebook.com/brian.yu.792/" class="fa fa-facebook"></a>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Bartlett, IL</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> Email: briany2@uic.edu</p>
+      <p><span class="glyphicon glyphicon-phone"></span> Phone: 331-551-4986</p>
+      <br>
+    </div>
+    </div>
+  </footer>
+
 </body>
+
 </html>
